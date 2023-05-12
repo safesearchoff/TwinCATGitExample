@@ -101,6 +101,11 @@
       <Namespace>VisuSymbols</Namespace>
     </LibraryReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PLC.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>

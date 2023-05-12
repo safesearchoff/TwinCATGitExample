@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[xOutput := xInput;
 
-timer1(IN:= NOT timer2.Q, PT:= T#1S);
+timer1(IN:= NOT timer2.Q, PT:= T#500MS);
 timer2(IN:= timer1.Q,PT := T#1S);]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
