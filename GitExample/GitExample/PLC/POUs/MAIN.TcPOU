@@ -5,13 +5,22 @@
 VAR
 	xInput : BOOL;
 	xOutput : BOOL;
+	
+	timer1 : TON;
+	timer2 : TON;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[xOutput := xInput;]]></ST>
+      <ST><![CDATA[xOutput := xInput;
+
+timer1(IN:= NOT timer2.Q, PT:= T#1S);
+timer2(IN:= timer1.Q,PT := T#1S);]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="14" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
